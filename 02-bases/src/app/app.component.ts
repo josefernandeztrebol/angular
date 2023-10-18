@@ -6,15 +6,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public title: string = 'ABYS';
-  public counter: number = 0;
-
-  increase_counter(value: number):void {
-    this.counter += value
-  }
-  reset(): void {
-    this.counter = 0
-  }
-  descrease_counter(value: number):void {
-    this.counter += value
-  }
 }
