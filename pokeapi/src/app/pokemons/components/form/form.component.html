@@ -1,0 +1,12 @@
+<form (ngSubmit)="submitForm()" [formGroup]="pokemonForm" #pokemonFormDirective="ngForm">
+  <label for="name">Name:</label>
+  <input type="text" id="name" formControlName="name" required>
+
+  <label for="types">Types:</label>
+  <input type="text" id="types" formControlName="types" required>
+
+  <label for="attack">Attack:</label>
+  <input type="text" id="attack" formControlName="attack" pattern="^\d+$">
+
+  <button type="submit" [disabled]="!pokemonForm.valid">Submit</button>
+</form>
