@@ -5,4 +5,7 @@
   <div class="col-12 pt2">
     <pokemon-table [listPokemons]="pokemons"></pokemon-table>
   </div>
+  <div class="col-12 pt3">
+    <pokemons-pokemon-form (onEditPokemon)="onNewEdit($event)"></pokemons-pokemon-form>
+  </div>
 </div>

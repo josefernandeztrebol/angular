@@ -5,7 +5,7 @@ import { PokemonComponent } from './components/pokemon/pokemon.component';
 import { PokemonTableComponent } from './components/table/table.component';
 import { LimitSearchComponent } from './components/limit-search/limit-search.component';
 import { PokemonsPokemonFormComponent } from './components/form/form.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,10 +17,11 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    ReactiveFormsModule,
+    FormsModule,
   ],
   exports: [
     HomeComponent,
+    PokemonsPokemonFormComponent
   ]
 })
 export class PokemonsModule { }

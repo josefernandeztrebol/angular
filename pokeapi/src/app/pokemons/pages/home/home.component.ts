@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { PokemonsService } from '../../service/pokemons.service';
-import { Result } from '../../interfaces/pokemon.interfaces';
+import { PokemonRow, Result } from '../../interfaces/pokemon.interfaces';
 
 @Component({
   selector: 'pokemons-home',
@@ -14,4 +14,14 @@ export class HomeComponent {
     return this.pokemonService.pokemonList;
   }
 
+  onNewEdit(pokemon: PokemonRow): void {
+    console.log(pokemon);
+
+    const index = this.pokemonService.savedPokemonData.findIndex(
+      (p) => p.name === pokemon.name
+    );
+    if (index !== -1) {
+      this.pokemonService.savedPokemonData[index] = pokemon;
+    }
+  }
 }
